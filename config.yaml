@@ -15,7 +15,7 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: www-cloudflare-com-tw
+  - id: www-hccc-com-tw
     name: www.hccc.com.tw
     description: 'hccc'
     url: 'https://www.hccc.com.tw'
@@ -27,6 +27,22 @@ monitors:
     name: www.altaistw.com
     description: 'altaistw'
     url: 'https://www.altaistw.com/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+    
+  - id: web-cloud-status-ovhcloud
+    name: web-cloud.status-ovhcloud.com
+    description: 'OVH Status'
+    url: 'https://web-cloud.status-ovhcloud.com/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: www-cloudflarestatus-com
+    name: www.cloudflarestatus.com
+    description: 'CF Status'
+    url: 'https://www.cloudflarestatus.com/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
